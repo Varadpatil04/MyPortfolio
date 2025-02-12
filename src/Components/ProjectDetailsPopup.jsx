@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaTimes, FaGithub, FaReact, FaNodeJs, FaAngular, FaVuejs, FaPython, FaDocker, FaAws } from "react-icons/fa";
-import { SiMongodb, SiMysql, SiFirebase, SiPostgresql, SiSqlite, SiRedis, SiRuby } from "react-icons/si";
+import { FaTimes,FaJs,FaBootstrap, FaGithub, FaReact, FaNodeJs, FaAngular, FaVuejs, FaPython, FaDocker, FaAws ,FaHtml5,FaCss3Alt} from "react-icons/fa";
+import { SiMongodb,SiCanva, SiMysql, SiFirebase, SiPostgresql,SiExpress, SiSqlite, SiRedis, SiRuby,SiTailwindcss } from "react-icons/si";
 
 const techIcons = {
   React: <FaReact className="text-blue-500 text-2xl md:text-3xl" />,
+  Html: <FaHtml5 className="text-orange-700 text-2xl md:text-3xl" />,
+  Tailwind: <SiTailwindcss className="text-blue-700 text-2xl md:text-3xl" />,
+  Css: <FaCss3Alt className="text-blue-400 text-2xl md:text-3xl" />,
+  BootStrap: <FaBootstrap className="text-purple-500 text-2xl md:text-3xl" />,
+  Canva: <SiCanva className="text-blue-600 text-2xl md:text-3xl" />,
+  Express: <SiExpress className="text-white text-2xl md:text-3xl" />,
+  JavaScript: <FaJs className="text-yellow-400 text-2xl md:text-3xl" />,
   "Node.js": <FaNodeJs className="text-green-500 text-2xl md:text-3xl" />,
   Angular: <FaAngular className="text-red-500 text-2xl md:text-3xl" />,
   Vue: <FaVuejs className="text-green-500 text-2xl md:text-3xl" />,

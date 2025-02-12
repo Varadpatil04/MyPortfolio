@@ -107,14 +107,16 @@ const Home = () => {
       {/* Social Links */}
       <motion.div className="absolute bottom-10 px-4 left-10 flex space-x-6">
         {[
-          { icon: FaLinkedin, label: "LinkedIn" },
-          { icon: FaGithub, label: "GitHub" },
-          { icon: FaMedium, label: "Medium" },
-          { icon: FaInstagram, label: "Instagram" }
-        ].map(({ icon: Icon, label }, index) => (
+          { icon: FaLinkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/varad-patil-2226a52b7/" },
+          { icon: FaGithub, label: "GitHub", url: "https://github.com/Varadpatil04" },
+          { icon: FaMedium, label: "Medium", url: "https://medium.com/@varadpatil" },
+          { icon: FaInstagram, label: "Instagram", url: "https://www.instagram.com/varad_patil0401/" }
+        ].map(({ icon: Icon, label, url }, index) => (
           <motion.a
             key={index}
-            href="#"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.05, ease: "easeInOut" }}

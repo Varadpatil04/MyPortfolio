@@ -38,7 +38,7 @@ const Popup = ({ onClose }) => {
               <div className="line-design" />
             </div>
             <div className="detail-item w-full sm:w-1/2 mb-2">
-              <p><strong className="text-gray-200">Contact No:</strong> +91 12345 67890</p>
+              <p><strong className="text-gray-200">Contact No:</strong> +91 9309564691</p>
               <div className="line-design" />
             </div>
             <div className="detail-item w-full sm:w-1/2 mb-2">

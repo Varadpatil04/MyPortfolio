@@ -98,18 +98,22 @@ const Navbar = () => {
       >
         {["home", "about", "works", "skills"].map(
           (section, index) => (
-            <motion.a
-              key={section}
-              href={`/${section}`}
-              onClick={() => handleClick(section)}
-              className={`text-xl transition-all duration-300 ${active === section ? "text-white drop-shadow-[0_0_10px_#3b82f6]" : "hover:text-white"
-                }`}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 * index, ease: "easeInOut" }} // Slow fade-in for mobile menu
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </motion.a>
+            <motion.div
+  key={section}
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.3 * index, ease: "easeInOut" }} // Slow fade-in for mobile menu
+>
+  <Link
+    to={`/${section}`}
+    onClick={() => handleClick(section)}
+    className={`text-xl transition-all duration-300 ${
+      active === section ? "text-white drop-shadow-[0_0_10px_#3b82f6]" : "hover:text-white"
+    }`}
+  >
+    {section.charAt(0).toUpperCase() + section.slice(1)}
+  </Link>
+</motion.div>
           )
         )}
       </motion.div>
