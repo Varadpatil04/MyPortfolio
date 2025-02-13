@@ -86,7 +86,7 @@ const SkillsPopup = ({ onClose, skill }) => {
           {skill.category && (
             <div className="flex flex-wrap -mx-2">
               {getSkills(skill.category).map((skillItem, index) => (
-                <div key={index} className="skill-card flex items-center p-2 bg-gray-800 rounded-lg shadow-md text-white m-2" style={{ width: '30%' }}>
+                <div key={index} className="skill-card flex items-center p-2 bg-gray-800 rounded-lg shadow-md text-white m-2 mob-skills" >
                   <skillItem.icon className="text-2xl mr-2" style={{ color: skillItem.color }} />
                   <span className="text-sm">{skillItem.title}</span>
                 </div>

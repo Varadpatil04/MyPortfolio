@@ -497,6 +497,15 @@
   }
 }
 
+.mob-skills{
+  width: 30%;
+}
+@media (max-width: 600px) {
+  .mob-skills{
+    width: 44%;
+  }
+}
+
 @media (min-width: 768px) {
   .skill-card {
     text-align: left !important;
