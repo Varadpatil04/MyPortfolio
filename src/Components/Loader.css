@@ -1,0 +1,111 @@
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #000000, #212121);
+    z-index: 9999; /* Ensure it is on top of all other elements */
+}
+
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 250px;
+    height: 200px;
+    position: relative;
+    color: #fff;
+}
+
+.loader:before,
+.loader:after,
+.loader .line1,
+.loader .line2,
+.loader .line3,
+.loader .line4,
+.loader .line5,
+.loader .line6 {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: .8s spin linear infinite;
+}
+
+.loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .5s;
+}
+
+.loader .line1 {
+    color: #00FF00;
+    transform: rotateX(60deg) rotateY(60deg);
+    animation-delay: .25s;
+}
+
+.loader .line2 {
+    color: #FF00FF;
+    transform: rotateX(120deg) rotateY(120deg);
+    animation-delay: .5s;
+}
+
+.loader .line3 {
+    color: #00FFFF;
+    transform: rotateX(180deg) rotateY(180deg);
+    animation-delay: .75s;
+}
+
+.loader .line4 {
+    color: #FFFF00;
+    transform: rotateX(240deg) rotateY(240deg);
+    animation-delay: 1s;
+}
+
+.loader .line5 {
+    color: #1aff00;
+    transform: rotateX(300deg) rotateY(300deg);
+    animation-delay: 1.25s;
+}
+
+.loader .line6 {
+    color: #00CCFF;
+    transform: rotateX(360deg) rotateY(360deg);
+    animation-delay: 1.5s;
+}
+
+@keyframes spin {
+    0%, 100% {
+        box-shadow: .4em 0px 0 0px currentcolor;
+    }
+    12% {
+        box-shadow: .4em .4em 0 0 currentcolor;
+    }
+    25% {
+        box-shadow: 0 .4em 0 0px currentcolor;
+    }
+    37% {
+        box-shadow: -.4em .4em 0 0 currentcolor;
+    }
+    50% {
+        box-shadow: -.4em 0 0 0 currentcolor;
+    }
+    62% {
+        box-shadow: -.4em -.4em 0 0 currentcolor;
+    }
+    75% {
+        box-shadow: 0px -.4em 0 0 currentcolor;
+    }
+    87% {
+        box-shadow: .4em -.4em 0 0 currentcolor;
+    }
+}
